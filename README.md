@@ -41,6 +41,9 @@ As requested by Maria, we will replace the 9th grade reading and math scores by 
 ### **Replacing 9th grade reading and math scores**
 Utilizing the *loc* method we were able to select the reading and math scores from the 9th grade at Thomas High School, and replace them with NaN using the following code.
 
+<details><summary><b>Code used for replacement</b></summary>
+<p>
+
 ```
 # Reading score
 student_data_df.loc[(student_data_df["school_name"] == "Thomas High School") &
@@ -53,9 +56,12 @@ student_data_df.loc[(student_data_df["school_name"] == "Thomas High School") &
 # Checking the Results
 student_data_df[(student_data_df["school_name"] == "Thomas High School") & (student_data_df["grade"] == "9th")]
 ```
+</p>
+</details>
 
+![9th grade replacement](https://github.com/amonjaras/School_District_Analysis/blob/main/Images/ninth_replacement.png)
 
-
+[:arrow_up: Go to Top](#index)
 
 Here is the list of deliverables for the analysis of the school district:
 
