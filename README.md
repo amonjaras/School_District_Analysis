@@ -12,19 +12,47 @@
 
 
 ## **1. OVERVIEW**
-Through out this Project, we we able to provide a high level snapshot of each school district's key metrics. All results were provided to the School Board.
+Through out this Project, we support Maria, chief Data Scientist, for City School District, to provide a high level snapshot of each school district's key metrics to the School Board.
 
-After some time, it was requested to replace the math and reading scores for Thomas High School, since their results show evidence of academic dishonesty.
+We analyze each school performance, based on the following:
+- Students math and reading scores
+- Students budget
+- Type of School
+- Size of School
+
+The results of the analysis helped the School Board at state and district levels, to perform strategic decisions regarding budget allocations.
+
+After the analysis sent to the School Board, they alerted Maria about a possible academic dishonest at Thomas High School, related to math and reading scores. Maria has requested us to replace the data and repeat the analysis.
 
 Once data is replaced we will repeat the school district analysis and provide the comparison within this report.
+
+[:arrow_up: Go to Top](#index)
 
 ## **2. RESOURCES**
 Data provided to perform the analysis.
 - [District School Data](https://github.com/amonjaras/School_District_Analysis/blob/main/Resources/schools_complete.csv)
 - [District Student Data](https://github.com/amonjaras/School_District_Analysis/blob/main/Resources/students_complete.csv)
 
-## **3. RESULTS**
+[:arrow_up: Go to Top](#index)
 
+## **3. RESULTS**
+As requested by Maria, we will replace the 9th grade reading and math scores by NaNs without affecting the rest of the results.
+
+### **Replacing 9th grade reading and math scores**
+Utilizing the *loc* method we were able to select the reading and math scores from the 9th grade at Thomas High School, and replace them with NaN using the following code.
+
+```
+# Reading score
+student_data_df.loc[(student_data_df["school_name"] == "Thomas High School") &
+                    (student_data_df["grade"] == "9th"), "reading_score"] = np.nan
+
+# Math score
+student_data_df.loc[(student_data_df["school_name"] == "Thomas High School") &
+                                     (student_data_df["grade"] == "9th"), "math_score"] = np.nan
+
+# Checking the Results
+student_data_df[(student_data_df["school_name"] == "Thomas High School") & (student_data_df["grade"] == "9th")]
+```
 
 
 
@@ -46,4 +74,4 @@ Here is the list of deliverables for the analysis of the school district:
   Course [^2].
   [^note]:
   [^1]: Author: Audrey MONJARAS :mexico: :canada:
-  [^2]: Data Analytics: Unit 4 Pandas :snake: :panda:
+  [^2]: Data Analytics: Unit 4 Pandas :snake: :panda_face:
