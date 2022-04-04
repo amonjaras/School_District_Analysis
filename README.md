@@ -247,6 +247,12 @@ Since THS is a Charter school, we appreciate a decrease in performance for Chart
 
 In terms of School Budget per student, the analysis reflect that schools with lowest budget per student, have the highest overall performance on average.
 
+Coding files can be found on the following locations:
+
+- [School Analysis](https://github.com/amonjaras/School_District_Analysis/blob/main/PyCitySchools.ipynb)
+
+- [School Analysis Challenge](https://github.com/amonjaras/School_District_Analysis/blob/main/PyCitySchools_Challenge.ipynb)
+
 [:arrow_up: Go to Top](#index)
 
   This work belongs to [^1].
